@@ -4,6 +4,37 @@
 
 {% block main_content %}
 
-    <h1>This is a home page</h1>
+    <h1> All Tasks </h1>
+
+    <div class="d-flex flex-wrap gap-3">
+
+        {% for x in tasks %}
+            
+            <div class="card" style="width: 18rem;">
+                
+                <div class="card-body">
+                <h5 class="card-title">{{x.taskTitle}}</h5>
+                <p class="card-text">{{x.taskDescription}}</p>
+                <p>Assigned Data: {{x.taskAssignDate}}</p>
+
+                {% if  x.is_Completed == False %}
+                    <div class="d-flex justify-content-between ">
+                        <a href="#" class="btn btn-warning">Edit</a>
+                        <a href="#" class="btn btn-warning">Delete</a>
+                        <a href="#" class="btn btn-warning">complete</a>
+                    </div>
+                {% else %}
+
+                    <a href="#" class="btn btn-primary">Completed</a>
+                
+                {% endif %}
+
+                    
+                </div>
+            </div>
+
+        {% endfor %}
+
+    </div>
 
 {% endblock  %}
