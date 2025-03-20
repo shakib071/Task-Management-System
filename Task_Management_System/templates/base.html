@@ -14,9 +14,9 @@
     
     <header class="p-1 " style="background-color: #d4edda;">
         <nav class="mt-3 d-flex justify-content-center align-items-center gap-5">
-            <a href=""><p class="btn btn-primary" >Home </p></a>
-            <a href=""><p class="btn btn-primary" >Add Task</p></a>
-            <a href=""><p class="btn btn-primary" >Add Category</p></a>
+            <a href="{% url 'homepage' %}"><p class="btn btn-primary" >Home </p></a>
+            <a href="  "><p class="btn btn-primary" >Add Task</p></a>
+            <a href="{% url 'add_category' %}"><p class="btn btn-primary" >Add Category</p></a>
             <a href=""><p class="btn btn-primary" >Show Tasks </p></a>
 
         </nav>
